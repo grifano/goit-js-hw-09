@@ -77,3 +77,87 @@ h3,
 h4 {
   text-align: center;
 }
+.is-current {
+  position: relative;
+}
+.is-current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  background-color: #ee7331;
+  height: 2px;
+  width: 100%;
+}
+/* Home Menu */
+.home-menu {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 48px 0;
+}
+.home-menu-item {
+}
+.home-menu-link {
+  font-size: 28px;
+  text-decoration: underline;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.home-menu-link:hover,
+.task-menu-link:hover,
+.task-menu-link:focus,
+.home-menu-link:focus {
+  color: #ee7331;
+}
+
+/* Task menu */
+.task-header {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+.logo-goit {
+  display: block;
+  margin-right: 20px;
+}
+.task-menu {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px 12px 12px;
+  gap: 16px;
+  flex-wrap: wrap;
+  /* position: fixed;
+  top: 16px;
+  left: 0; */
+  background-color: #2f4858;
+  border-radius: 0px 8px 8px 0;
+}
+.task-menu-item {
+}
+.task-menu-link {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.task-menu-icon {
+  display: block;
+  fill: #fff;
+}
+.task-menu-icon:hover,
+.task-menu-icon:focus {
+  fill: #ee7331;
+  transition: fill 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@media screen and (max-width: 768px) {
+  .task-header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .logo-goit {
+    margin: 0;
+  }
+  .task-menu {
+    border-radius: 8px;
+  }
+}
